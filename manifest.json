@@ -1,0 +1,171 @@
+{
+  "runtime": "canvas-v1",
+  "name": "League Tracker",
+  "description": "Displays a League of Legends player's Riot ID, level, ranked queues and active-match state.",
+  "version": "1.0.0",
+  "entry": "dist/index.html",
+  "thumbnail": "preview.png",
+  "deviceSettingsVersion": "1",
+  "ui": {
+    "pointerEvents": "none"
+  },
+  "settings": [
+    {
+      "id": "player",
+      "type": "section",
+      "label": "Player"
+    },
+    {
+      "id": "gameName",
+      "type": "string",
+      "label": "Riot game name",
+      "description": "The part before # in the player's Riot ID.",
+      "parent": "player",
+      "scope": "layer",
+      "default": "",
+      "placeholder": "Player name"
+    },
+    {
+      "id": "tagLine",
+      "type": "string",
+      "label": "Riot tag",
+      "description": "The part after # in the player's Riot ID.",
+      "parent": "player",
+      "scope": "layer",
+      "default": "",
+      "placeholder": "EUW"
+    },
+    {
+      "id": "platform",
+      "type": "select",
+      "label": "Platform",
+      "parent": "player",
+      "scope": "layer",
+      "default": "euw1",
+      "options": [
+        { "label": "Europe West", "value": "euw1" },
+        { "label": "Europe Nordic & East", "value": "eun1" },
+        { "label": "North America", "value": "na1" },
+        { "label": "Brazil", "value": "br1" },
+        { "label": "Latin America North", "value": "la1" },
+        { "label": "Latin America South", "value": "la2" },
+        { "label": "Korea", "value": "kr" },
+        { "label": "Japan", "value": "jp1" },
+        { "label": "Oceania", "value": "oc1" },
+        { "label": "Türkiye", "value": "tr1" },
+        { "label": "Russia", "value": "ru" },
+        { "label": "Philippines", "value": "ph2" },
+        { "label": "Singapore", "value": "sg2" },
+        { "label": "Thailand", "value": "th2" },
+        { "label": "Taiwan", "value": "tw2" },
+        { "label": "Vietnam", "value": "vn2" }
+      ]
+    },
+    {
+      "id": "refreshNow",
+      "type": "button",
+      "label": "Live data",
+      "parent": "player",
+      "buttonLabel": "Refresh now"
+    },
+    {
+      "id": "updates",
+      "type": "section",
+      "label": "Updates"
+    },
+    {
+      "id": "autoRefresh",
+      "type": "boolean",
+      "label": "Refresh automatically",
+      "parent": "updates",
+      "scope": "layer",
+      "default": true
+    },
+    {
+      "id": "refreshInterval",
+      "type": "select",
+      "label": "Refresh interval",
+      "parent": "updates",
+      "scope": "layer",
+      "default": "60",
+      "showIf": { "setting": "autoRefresh", "equals": true },
+      "options": [
+        { "label": "30 seconds", "value": "30" },
+        { "label": "1 minute", "value": "60" },
+        { "label": "5 minutes", "value": "300" }
+      ]
+    },
+    {
+      "id": "appearance",
+      "type": "section",
+      "label": "Appearance"
+    },
+    {
+      "id": "layout",
+      "type": "select",
+      "label": "Layout",
+      "parent": "appearance",
+      "scope": "layer",
+      "default": "detailed",
+      "options": [
+        { "label": "Detailed", "value": "detailed" },
+        { "label": "Compact", "value": "compact" }
+      ]
+    },
+    {
+      "id": "accentColor",
+      "type": "color",
+      "label": "Accent",
+      "parent": "appearance",
+      "scope": "layer",
+      "default": "#c89b3c"
+    },
+    {
+      "id": "textColor",
+      "type": "color",
+      "label": "Primary text",
+      "parent": "appearance",
+      "scope": "layer",
+      "default": "#f5f3ea"
+    },
+    {
+      "id": "secondaryColor",
+      "type": "color",
+      "label": "Secondary text",
+      "parent": "appearance",
+      "scope": "layer",
+      "default": "#a9b2c3"
+    },
+    {
+      "id": "backgroundColor",
+      "type": "color",
+      "label": "Background",
+      "parent": "appearance",
+      "scope": "layer",
+      "alpha": true,
+      "default": "#08111ee8"
+    },
+    {
+      "id": "cornerRadius",
+      "type": "range",
+      "label": "Corner radius",
+      "parent": "appearance",
+      "scope": "layer",
+      "default": 24,
+      "min": 0,
+      "max": 64,
+      "step": 1
+    },
+    {
+      "id": "backgroundBlur",
+      "type": "range",
+      "label": "Background blur",
+      "parent": "appearance",
+      "scope": "layer",
+      "default": 18,
+      "min": 0,
+      "max": 48,
+      "step": 1
+    }
+  ]
+}
