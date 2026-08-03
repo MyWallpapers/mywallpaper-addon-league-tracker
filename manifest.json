@@ -4,7 +4,7 @@
   "description": "Displays a League of Legends player's Riot ID, level, ranked queues and active-match state.",
   "version": "1.0.0",
   "entry": "dist/index.html",
-  "thumbnail": "preview.png",
+  "thumbnail": "assets/thumbnail.png",
   "deviceSettingsVersion": "1",
   "ui": {
     "pointerEvents": "none"
