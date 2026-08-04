@@ -2,7 +2,7 @@
   "runtime": "canvas-v1",
   "name": "League Tracker",
   "description": "Displays a League of Legends player's Riot ID, level, ranked queues and active-match state.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "entry": "dist/index.html",
   "thumbnail": "assets/thumbnail.png",
   "deviceSettingsVersion": "1",
